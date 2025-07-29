@@ -1,6 +1,5 @@
 package com.miniMarketOrder;
 
-import com.miniMarketOrder.config.RateLimitConfig;
 import com.miniMarketOrder.dto.OrderRequest;
 import com.miniMarketOrder.entity.Order;
 import com.miniMarketOrder.repository.ExecutionRepository;
@@ -182,7 +181,7 @@ class MiniMarketOrderApplicationTests {
 				.thenThrow(serverError)
 				.thenReturn(expectedResponse);
 
-		OrderService service = new OrderService(orderRepository, execRepository, mockClient, null);
+		OrderService service = new OrderService(orderRepository, execRepository, mockClient);
 
 		PriceFeedClient.PriceResponse response = service.fetchPriceWithRetry(symbol);
 

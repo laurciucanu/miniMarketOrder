@@ -1,6 +1,5 @@
 package com.miniMarketOrder.service;
 
-import com.miniMarketOrder.config.RateLimitConfig;
 import com.miniMarketOrder.dto.OrderRequest;
 import com.miniMarketOrder.dto.OrderResponse;
 import com.miniMarketOrder.entity.Execution;
